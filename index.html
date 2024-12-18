@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="container text-center my-5 p-4 w-50" id="signUp">
+            <h1>Smart Login System</h1>
+            <input class="form-control my-3" id="name" type="text" placeholder="Enter your name">
+            <input class="form-control my-3" id="email" type="email" placeholder="Enter your email">
+            <input class="form-control my-3" id="password" type="password" placeholder="Enter password">
+            <span id="note" class="text-danger"></span>
+            <span id="error" class="text-danger"></span>
+            <button id="SignUpBtn" class="btn btn-outline-info my-3 w-100">Sign Up</button>
+            <p>You have an account? <a href="#" id="signIn">Signin</a></p>
+        </div>
+        <div class="container text-center my-5 p-4 w-50" id="Login">
+            <h1>Smart Login System</h1>
+            <input class="form-control my-3" id="emailLogin" type="email" placeholder="Enter your email">
+            <input class="form-control my-3" id="passwordLogin" type="password" placeholder="Enter password">
+            <span id="loginError" class="text-danger"></span>
+            <span id="inputsError" class="text-danger"></span>
+            <button class="btn btn-outline-info my-3 w-100" id="Log">Login</button>
+            <p>Don’t have an account? <a href="#" id="signUpLink">Sign Up</a></p>
+        </div>
+        <h1 id="welcome" class="text-center mt-5"></h1>
+
+        <script src="./Js/bootstrap.bundle.min.js"></script>
+        <script src="./Js/main.js"></script>
+    </body>
+</html>
