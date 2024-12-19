@@ -7,6 +7,7 @@ let signUp = document.getElementById('signUpLink');
 let login = document.getElementById('Log');
 let emailLogin = document.getElementById('emailLogin');
 let passwordLogin = document.getElementById('passwordLogin');
+let Logout = document.getElementById('logOut');
 
 let personInfo = [];
 if (localStorage.getItem('info') != null) {
@@ -66,6 +67,8 @@ login.addEventListener('click', function () {
         for (let i = 0; i < personInfo.length; i++) {
             if (personInfo[i].personEmail == emailLogin.value && personInfo[i].personPass == passwordLogin.value) {
                 document.getElementById('Login').style.display = 'none';
+                document.getElementById('nav').style.display = 'flex';
+                document.getElementById('msg').style.display = 'block';
                 document.getElementById('welcome').innerHTML = "Welcome " + personInfo[i].personName;
                 loginSuccess = true;
                 break;
@@ -76,3 +79,10 @@ login.addEventListener('click', function () {
         }
     }
 });
+
+Logout.addEventListener('click',function(){
+    document.getElementById('Login').style.display = 'block';
+    document.getElementById('nav').style.display = 'none';
+    document.getElementById('msg').style.display = 'none';
+    document.getElementById('welcome').innerHTML = "";
+})
